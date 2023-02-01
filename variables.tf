@@ -5,3 +5,7 @@ variable "sgid" {
 variable "subnetid" {
   default = "none"
 }
+
+variable "insttype" {
+  default = "t2.small"
+}
