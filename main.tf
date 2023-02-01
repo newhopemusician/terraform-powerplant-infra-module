@@ -4,9 +4,9 @@ provider "aws" {
 
 resource "aws_instance" "web" {
 	ami = "ami-061e388c127cfdae7"
-	subnet_id = var.network-module.subnetid
+	subnet_id = var.subnetid
 	instance_type = "t2.small"
-	vpc_security_group_ids = [var.network-module.sgid]
+	vpc_security_group_ids = [var.sgid]
 
 	tags = {
 		Name = "Doh!"
