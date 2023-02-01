@@ -1,11 +1,11 @@
 provider "aws" {
-  region = "us-east-2"
+  region = var.region
 }
 
 resource "aws_instance" "web" {
 	ami = "ami-061e388c127cfdae7"
 	subnet_id = var.subnetid
-	instance_type = "t2.small"
+	instance_type = var.insttype
 	vpc_security_group_ids = [var.sgid]
 
 	tags = {
