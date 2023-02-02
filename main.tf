@@ -3,7 +3,7 @@ provider "aws" {
 }
 
 resource "aws_instance" "web" {
-	ami = "ami-0471021a4ee6bfcce"
+	ami = var.ami
 	subnet_id = var.subnetid
 	instance_type = var.insttype
 	vpc_security_group_ids = [var.sgid]
