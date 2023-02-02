@@ -1,3 +1,6 @@
+variable "ami" {
+  default = "ami-0471021a4ee6bfcce"
+
 variable "sgid" {
   default = "none"
 }
